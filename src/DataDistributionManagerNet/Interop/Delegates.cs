@@ -55,6 +55,8 @@ namespace MASES.DataDistributionManager.Bindings.Interop
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl, CharSet = CharSet.Ansi, SetLastError = true)]
     delegate IntPtr DataDistribution_create();
+    [UnmanagedFunctionPointer(CallingConvention.Cdecl, CharSet = CharSet.Ansi, SetLastError = true)]
+    delegate void DataDistribution_destroy(IntPtr ddmptr);
     #endregion
 
     #region DataDistributionCallback

@@ -109,6 +109,7 @@ typedef long OPERATION_RESULT;
 */
 #define OPERATION_FAILED(or) (((OPERATION_RESULT)(or)) < 0)
 
+#define DDM_UNSET_OPERATION_RESULT -1										/**< Unset condition */
 #define DDM_NO_ERROR_CONDITION 0											/**< No error */
 
 // Condition section
@@ -131,5 +132,6 @@ typedef long OPERATION_RESULT;
 #define DDM_NOT_IMPLEMENTED DDM_UNMAPPED_ERROR_CONDITION + 8				/**< Function not implemented */
 #define DDM_PARAMETER_ERROR DDM_UNMAPPED_ERROR_CONDITION + 9				/**< Errors in parameters */
 #define DDM_SEEK_FAILED DDM_UNMAPPED_ERROR_CONDITION + 10					/**< Errors during seek operation */
+#define DDM_ALREADY_INITIALIZED DDM_UNMAPPED_ERROR_CONDITION + 11			/**< Data Distribution Manager was already initialized */
 
 #endif // !defined(DATADISTRIBUTIONMANAGERTYPES_H__INCLUDED_)

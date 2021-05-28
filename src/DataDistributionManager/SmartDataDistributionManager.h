@@ -227,8 +227,6 @@ public:
 	 * \p keyLen the length of key
 	 * \p buffer the data buffer received
 	 * \p len the length of the buffer
-	 * \p timestamp The timestamp associated to the data: Milliseconds since epoch (UTC).
-	 * \p offset The offset associated to the data
 	 * 
 	 */
 	virtual void OnDataAvailable(const char *key, size_t keyLen, const void *buffer, const size_t len);
@@ -238,8 +236,6 @@ public:
 	 * \p key the key of the message, NULL if the key was omitted in transmission
 	 * \p buffer the data buffer received
 	 * \p len the length of the buffer
-	 * \p timestamp The timestamp associated to the data: Milliseconds since epoch (UTC).
-	 * \p offset The offset associated to the data
 	 * 
 	 */
 	virtual void OnDataAvailable(const std::string key, const void *buffer, const size_t len);

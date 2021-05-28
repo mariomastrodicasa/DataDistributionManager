@@ -248,9 +248,14 @@ IDataDistribution *DataDistribution::create()
 	return new DataDistributionManagerImpl();
 }
 
+void DataDistribution::destroy(IDataDistribution* pdd)
+{
+	delete static_cast<DataDistributionManagerImpl*>(pdd);
+}
+
 DataDistributionManagerImpl::DataDistributionManagerImpl()
 {
-	m_InitializedResult = NULL;
+	m_InitializedResult = m_InitializedMastershipResult = DDM_UNSET_OPERATION_RESULT;
 	m_hlibModule = NULL;
 	m_hMastershipManagerModule = NULL;
 	pDataDistributionManagerSubsystem = NULL;
@@ -379,6 +384,8 @@ OPERATION_RESULT DataDistributionManagerImpl::read_config_file(const char* array
 
 OPERATION_RESULT DataDistributionManagerImpl::Initialize(IDataDistributionCallback* callbacks, const char* conf_file, const char* szMyAddress, const char* channelTrailer)
 {
+	if (DDM_UNSET_OPERATION_RESULT != m_InitializedResult) return DDM_ALREADY_INITIALIZED;
+
 	int len = 0;
 	const char** arrayParams = NULL;
 
@@ -390,6 +397,8 @@ OPERATION_RESULT DataDistributionManagerImpl::Initialize(IDataDistributionCallba
 
 OPERATION_RESULT DataDistributionManagerImpl::Initialize(IDataDistributionCallback* callbacks, const char* arrayParams[], int length, const char* szMyAddress, const char* channelTrailer)
 {
+	if (DDM_UNSET_OPERATION_RESULT != m_InitializedResult) return DDM_ALREADY_INITIALIZED;
+
 	OPERATION_RESULT res = read_config_file(arrayParams, length);
 	if (OPERATION_FAILED(res)) return res;
 
@@ -448,6 +457,8 @@ OPERATION_RESULT DataDistributionManagerImpl::Initialize(IDataDistributionCallba
 
 OPERATION_RESULT DataDistributionManagerImpl::RequestMastershipManager(IDataDistributionMastershipCallback* mastershipCallback, const char* szMyAddress, const char* arrayParams[], int len)
 {
+	if (DDM_UNSET_OPERATION_RESULT != m_InitializedMastershipResult) return DDM_ALREADY_INITIALIZED;
+
 	OPERATION_RESULT res = read_config_file((arrayParams == NULL) ? m_arrayParams : arrayParams, (arrayParams == NULL) ? m_arrayParamsLen : len);
 	if (OPERATION_FAILED(res)) return res;
 
@@ -474,10 +485,8 @@ OPERATION_RESULT DataDistributionManagerImpl::RequestMastershipManager(IDataDist
 		m_InitializedMastershipResult = pDataDistributionMastershipManagerCommon->Initialize(pDataDistributionManagerSubsystem, mastershipCallback, szMyAddress,
 			(arrayParams == NULL) ? m_arrayParams : arrayParams,
 			(arrayParams == NULL) ? m_arrayParamsLen : len);
-
-		if (OPERATION_FAILED(m_InitializedMastershipResult)) return m_InitializedMastershipResult;
 	}
-	return DDM_NO_ERROR_CONDITION;
+	return m_InitializedMastershipResult;
 }
 
 BOOL DataDistributionManagerImpl::Start(unsigned long dwMilliseconds)

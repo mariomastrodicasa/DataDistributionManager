@@ -120,6 +120,17 @@ JNIEXPORT jlong JNICALL Java_org_mases_datadistributionmanager_NativeInterface_D
 	return (jlong)DataDistribution::create();
 }
 
+/*
+* Class:     org_mases_datadistributionmanager_NativeInterface
+* Method:    DataDistribution_destroy
+* Signature: (J)V
+*/
+JNIEXPORT void JNICALL Java_org_mases_datadistributionmanager_NativeInterface_DataDistribution_1destroy
+(JNIEnv * env, jclass caller, jlong jpdd)
+{
+	DataDistribution::destroy((IDataDistribution*)jpdd);
+}
+
 struct DataDistributionCallbackContainer
 {
 	jobject jthis;

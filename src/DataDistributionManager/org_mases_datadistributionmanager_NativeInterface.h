@@ -17,6 +17,14 @@ JNIEXPORT jlong JNICALL Java_org_mases_datadistributionmanager_NativeInterface_D
 
 /*
  * Class:     org_mases_datadistributionmanager_NativeInterface
+ * Method:    DataDistribution_destroy
+ * Signature: (J)V
+ */
+JNIEXPORT void JNICALL Java_org_mases_datadistributionmanager_NativeInterface_DataDistribution_1destroy
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     org_mases_datadistributionmanager_NativeInterface
  * Method:    DataDistributionCallback_create
  * Signature: (Ljava/lang/Object;)J
  */

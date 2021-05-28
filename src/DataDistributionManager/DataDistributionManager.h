@@ -1122,6 +1122,12 @@ public:
 	 * @returns the IDataDistribution istance created
 	 */
 	static IDataDistribution *create();
+	/**
+	* @brief Destroy an IDataDistribution instance.
+	*
+	* \p pdd the IDataDistribution istance to be destroyed
+	*/
+	static void destroy(IDataDistribution* pdd);
 };
 
 #endif // !defined(DATADISTRIBUTIONMANAGER_H__INCLUDED_)

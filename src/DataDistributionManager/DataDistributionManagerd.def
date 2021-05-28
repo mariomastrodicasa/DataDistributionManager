@@ -2,6 +2,7 @@ LIBRARY      "DataDistributionManagerd"
 
 EXPORTS
 DataDistribution_create
+DataDistribution_destroy
 DataDistributionCallback_create 
 DataDistributionCallback_delete 
 DataDistributionChannelCallback_create 

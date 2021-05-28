@@ -23,6 +23,11 @@ DLLEXPORT void* DLLCALL DataDistribution_create()
 	return DataDistribution::create();
 }
 
+DLLEXPORT void DLLCALL DataDistribution_destroy(void* pdd)
+{
+	DataDistribution::destroy((IDataDistribution*)pdd);
+}
+
 DLLEXPORT void* DLLCALL DataDistributionCallback_create(void* opaque, dataDistributionConfigurationCb conf, dataDistributionLoggingCb log, dataDistributionCompletelyDisconnectedCb disconnected)
 {
 	return DataDistributionCallback::create(opaque, conf, log, disconnected);

@@ -21,6 +21,8 @@ package org.mases.datadistributionmanager;
 class NativeInterface {
         static native long DataDistribution_create();
 
+        static native void DataDistribution_destroy(long pdd);
+
         static native long DataDistributionCallback_create(Object opaque);
 
         static native void DataDistributionCallback_delete(long ddcb);

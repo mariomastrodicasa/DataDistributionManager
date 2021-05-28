@@ -25,6 +25,7 @@
 extern "C" {
 #endif
 	DLLEXPORT void* DLLCALL DataDistribution_create();
+	DLLEXPORT void DLLCALL DataDistribution_destroy(void*);
 	DLLEXPORT void* DLLCALL DataDistributionCallback_create(void* opaque, dataDistributionConfigurationCb, dataDistributionLoggingCb, dataDistributionCompletelyDisconnectedCb);
 	DLLEXPORT void DLLCALL DataDistributionCallback_delete(void* ddcb);
 	DLLEXPORT void* DLLCALL DataDistributionChannelCallback_create(void* opaque, dataDistributionUnderlyingEvent uEventCb);
