@@ -111,6 +111,8 @@ Macros</h2></td></tr>
 <tr class="memitem:af24377a8bd76181a0c2269615a2e346c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataDistributionManagerTypes_8h.html#af24377a8bd76181a0c2269615a2e346c">OPERATION_FAILED</a>(or)&#160;&#160;&#160;(((<a class="el" href="DataDistributionManagerTypes_8h.html#a1f2fba3780ff5e3481d1c56c646b922b">OPERATION_RESULT</a>)(or)) &lt; 0)</td></tr>
 <tr class="memdesc:af24377a8bd76181a0c2269615a2e346c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if operation failed.  <a href="DataDistributionManagerTypes_8h.html#af24377a8bd76181a0c2269615a2e346c">More...</a><br /></td></tr>
 <tr class="separator:af24377a8bd76181a0c2269615a2e346c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ff06bd5534e8fcfce7ab467eb24d86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataDistributionManagerTypes_8h.html#a87ff06bd5534e8fcfce7ab467eb24d86">DDM_UNSET_OPERATION_RESULT</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:a87ff06bd5534e8fcfce7ab467eb24d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5bd54114909db3c92a8e4a881d3302c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataDistributionManagerTypes_8h.html#af5bd54114909db3c92a8e4a881d3302c">DDM_NO_ERROR_CONDITION</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:af5bd54114909db3c92a8e4a881d3302c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb480e61476e24dd0929392f49880a7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataDistributionManagerTypes_8h.html#aeb480e61476e24dd0929392f49880a7b">DDM_DATA_AVAILABLE</a>&#160;&#160;&#160;0x20000000</td></tr>
@@ -147,6 +149,8 @@ Macros</h2></td></tr>
 <tr class="separator:a54905079f65dc60db3e53ad0365c4d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160265435e6013a1a4346806b85af8eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataDistributionManagerTypes_8h.html#a160265435e6013a1a4346806b85af8eb">DDM_SEEK_FAILED</a>&#160;&#160;&#160;<a class="el" href="DataDistributionManagerTypes_8h.html#a158e5fb9b2ba665e5ad301792de65a2b">DDM_UNMAPPED_ERROR_CONDITION</a> + 10</td></tr>
 <tr class="separator:a160265435e6013a1a4346806b85af8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2e8734c5db623ee4810f1ba3c5568d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DataDistributionManagerTypes_8h.html#a9c2e8734c5db623ee4810f1ba3c5568d">DDM_ALREADY_INITIALIZED</a>&#160;&#160;&#160;<a class="el" href="DataDistributionManagerTypes_8h.html#a158e5fb9b2ba665e5ad301792de65a2b">DDM_UNMAPPED_ERROR_CONDITION</a> + 11</td></tr>
+<tr class="separator:a9c2e8734c5db623ee4810f1ba3c5568d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -190,6 +194,21 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Channel handle parameter definition. </p>
+
+</div>
+</div>
+<a id="a9c2e8734c5db623ee4810f1ba3c5568d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2e8734c5db623ee4810f1ba3c5568d">&#9670;&nbsp;</a></span>DDM_ALREADY_INITIALIZED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDM_ALREADY_INITIALIZED&#160;&#160;&#160;<a class="el" href="DataDistributionManagerTypes_8h.html#a158e5fb9b2ba665e5ad301792de65a2b">DDM_UNMAPPED_ERROR_CONDITION</a> + 11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Data Distribution Manager was already initialized </p>
 
 </div>
 </div>
@@ -461,6 +480,21 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Unmapped error </p>
+
+</div>
+</div>
+<a id="a87ff06bd5534e8fcfce7ab467eb24d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ff06bd5534e8fcfce7ab467eb24d86">&#9670;&nbsp;</a></span>DDM_UNSET_OPERATION_RESULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DDM_UNSET_OPERATION_RESULT&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unset condition </p>
 
 </div>
 </div>

@@ -2,6 +2,7 @@ var DataDistributionManagerTypes_8h =
 [
     [ "CHANNEL_HANDLE", "DataDistributionManagerTypes_8h.html#adee0f43aad519bdac771682743533959", null ],
     [ "CHANNEL_HANDLE_PARAMETER", "DataDistributionManagerTypes_8h.html#a485805b8e0f9cc8393cff8da5a01415a", null ],
+    [ "DDM_ALREADY_INITIALIZED", "DataDistributionManagerTypes_8h.html#a9c2e8734c5db623ee4810f1ba3c5568d", null ],
     [ "DDM_COMMIT_FAILED", "DataDistributionManagerTypes_8h.html#a0849cc2651b04a0c8ca3c3809d905814", null ],
     [ "DDM_DATA_AVAILABLE", "DataDistributionManagerTypes_8h.html#aeb480e61476e24dd0929392f49880a7b", null ],
     [ "DDM_ELAPSED_MESSAGE_ACKNOWLEDGMENT_TIMEOUT", "DataDistributionManagerTypes_8h.html#ab7c1833895ab409643ec1b617261e9b5", null ],
@@ -20,6 +21,7 @@ var DataDistributionManagerTypes_8h =
     [ "DDM_SUBSYSTEM_NOT_STARTED", "DataDistributionManagerTypes_8h.html#a630df990c9250bfb7d09cb8c79c73a66", null ],
     [ "DDM_TIMEOUT", "DataDistributionManagerTypes_8h.html#a3dda9db90bdf61354e605ccd724431ec", null ],
     [ "DDM_UNMAPPED_ERROR_CONDITION", "DataDistributionManagerTypes_8h.html#a158e5fb9b2ba665e5ad301792de65a2b", null ],
+    [ "DDM_UNSET_OPERATION_RESULT", "DataDistributionManagerTypes_8h.html#a87ff06bd5534e8fcfce7ab467eb24d86", null ],
     [ "DDM_WRITE_FAILED", "DataDistributionManagerTypes_8h.html#a4c8335c6b7e98570d0c647f92531f05e", null ],
     [ "OPERATION_FAILED", "DataDistributionManagerTypes_8h.html#af24377a8bd76181a0c2269615a2e346c", null ],
     [ "OPERATION_SUCCEEDED", "DataDistributionManagerTypes_8h.html#a8533ed7e57b99f49ff729c2003c2ce11", null ],
